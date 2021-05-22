@@ -34,7 +34,7 @@
 #include <map>
 
 /// Class that represents items of the wxChartsLegendData class.
-class wxChartsLegendItem
+class WXCHARTS_API wxChartsLegendItem
 {
 public:
     /// Constructs a wxChartsLegendItem instance.
@@ -70,7 +70,7 @@ private:
 typedef wxVector<wxChartsLegendItem> wxChartsLegendItems;
 
 /// Data for the wxChartsLegendCtrl control.
-class wxChartsLegendData
+class WXCHARTS_API wxChartsLegendData
 {
 public:
     /// Constructs a wxChartsLegendData

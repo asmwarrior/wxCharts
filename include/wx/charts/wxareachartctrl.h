@@ -44,7 +44,7 @@
 /**
     \ingroup chartclasses
 */
-class wxAreaChartCtrl : public wxChartCtrl
+class WXCHARTS_API wxAreaChartCtrl : public wxChartCtrl
 {
 public:
     /// Constructor.

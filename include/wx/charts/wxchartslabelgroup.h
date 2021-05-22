@@ -28,7 +28,7 @@
 #include "wxchartslabel.h"
 
 /// This class is to manage a group of labels.
-class wxChartsLabelGroup : public wxVector<wxChartsLabel>
+class WXCHARTS_API wxChartsLabelGroup : public wxVector<wxChartsLabel>
 {
 public:
     wxChartsLabelGroup();

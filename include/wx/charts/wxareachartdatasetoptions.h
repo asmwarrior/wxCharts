@@ -25,9 +25,11 @@
 #ifndef _WX_CHARTS_WXAREACHARTDATASETOPTIONS_H_
 #define _WX_CHARTS_WXAREACHARTDATASETOPTIONS_H_
 
+#include "wxcharts_api_macro.h"
+
 #include <wx/colour.h>
 
-class wxAreaChartDatasetOptions
+class WXCHARTS_API wxAreaChartDatasetOptions
 {
 public:
     wxAreaChartDatasetOptions(const wxColor &dotColor);

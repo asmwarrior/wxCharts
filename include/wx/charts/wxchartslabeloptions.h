@@ -29,9 +29,10 @@
 #include "wxchartbackgroundoptions.h"
 
 /// The options for the wxChartsLabel element.
-class wxChartsLabelOptions : public wxObject
+class WXCHARTS_API wxChartsLabelOptions : public wxObject
 {
 public:
+    wxChartsLabelOptions();
     wxChartsLabelOptions(const wxChartFontOptions &fontOptions,
         bool hasBackground, const wxChartBackgroundOptions &backgroundOptions);
 

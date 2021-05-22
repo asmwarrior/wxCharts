@@ -25,6 +25,8 @@
 #ifndef _WX_CHARTS_WXCANDLESTICKCHARTCTRL_H_
 #define _WX_CHARTS_WXCANDLESTICKCHARTCTRL_H_
 
+#include "wxcharts_api_macro.h"
+
 #include "wxchartctrl.h"
 #include "wxcandlestickchart.h"
 
@@ -32,7 +34,7 @@
 /**
     \ingroup chartclasses
 */
-class wxCandlestickChartCtrl : public wxChartCtrl
+class WXCHARTS_API wxCandlestickChartCtrl : public wxChartCtrl
 {
 public:
     /// Constructor.

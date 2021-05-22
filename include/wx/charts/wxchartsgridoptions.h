@@ -29,7 +29,7 @@
 #include <wx/colour.h>
 
 /// The options for the grid lines of wxChartsGrid element.
-class wxChartsGridLineOptions
+class WXCHARTS_API wxChartsGridLineOptions
 {
 public:
     /// Constructs a wxChartsGridOptions
@@ -80,7 +80,7 @@ private:
 };
 
 /// The options for the wxChartsGrid element.
-class wxChartsGridOptions
+class WXCHARTS_API wxChartsGridOptions
 {
 public:
     /// Constructs a wxChartsGridOptions instance with

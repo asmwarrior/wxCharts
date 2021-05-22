@@ -30,7 +30,7 @@
 #include "wxchartsgrid.h"
 #include "wxchartscircle.h"
 
-class wxDoubleTriplet
+class WXCHARTS_API wxDoubleTriplet
 {
 public:
     wxDoubleTriplet(wxDouble x, wxDouble y, wxDouble z);
@@ -41,7 +41,7 @@ public:
 };
 
 /// \ingroup dataclasses
-class wxBubbleChartDataset
+class WXCHARTS_API wxBubbleChartDataset
 {
 public:
     /// Smart pointer typedef.
@@ -72,7 +72,7 @@ private:
 /// Data for the wxBubbleChartCtrl control.
 
 /// \ingroup dataclasses
-class wxBubbleChartData
+class WXCHARTS_API wxBubbleChartData
 {
 public:
     /// Constructs a wxBubbleChartData instance.
@@ -92,7 +92,7 @@ private:
 /**
     \ingroup chartclasses
 */
-class wxBubbleChart : public wxChart
+class WXCHARTS_API wxBubbleChart : public wxChart
 {
 public:
     /// Constructor.

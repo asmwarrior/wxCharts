@@ -64,7 +64,7 @@
 ///
 /// @see wxChartsGridOptions
 /// \ingroup elementclasses
-class wxChartsGrid : public wxChartsElement
+class WXCHARTS_API wxChartsGrid : public wxChartsElement
 {
 public:
     typedef wxSharedPtr<wxChartsGrid> ptr;

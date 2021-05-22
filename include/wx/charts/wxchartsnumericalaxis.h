@@ -45,7 +45,7 @@ enum wxChartsAxisScale
 };
 
 /// \ingroup elementclasses
-class wxChartsNumericalAxis : public wxChartsAxis
+class WXCHARTS_API wxChartsNumericalAxis : public wxChartsAxis
 {
 public:
     /// Constructs a wxChartsNumericalAxis axis. The

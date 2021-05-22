@@ -32,7 +32,7 @@
 /// This class is used to display a point on a chart.
 
 /// \ingroup elementclasses
-class wxChartsPoint : public wxChartsElement
+class WXCHARTS_API wxChartsPoint : public wxChartsElement
 {
 public:
     /// Constructs a wxChartPoint element.

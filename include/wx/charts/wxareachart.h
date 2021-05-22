@@ -42,7 +42,7 @@
 #include "wxchartspoint.h"
 
 /// \ingroup dataclasses
-class wxAreaChartDataset
+class WXCHARTS_API wxAreaChartDataset
 {
 public:
     /// Smart pointer typedef.
@@ -62,7 +62,7 @@ private:
 /// Data for the wxAreaChartCtrl control.
 
 /// \ingroup dataclasses
-class wxAreaChartData
+class WXCHARTS_API wxAreaChartData
 {
 public:
     /// Constructs a wxAreaChartData instance.
@@ -82,7 +82,7 @@ private:
 /**
     \ingroup chartclasses
 */
-class wxAreaChart : public wxChart
+class WXCHARTS_API wxAreaChart : public wxChart
 {
 public:
     /// Constructor.

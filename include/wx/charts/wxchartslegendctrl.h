@@ -35,7 +35,7 @@
 /// The legend is implemented as a separate control (and not
 /// as part of the chart control itself) to allow for more
 /// flexible layouts with the help of wxWidgets sizers.
-class wxChartsLegendCtrl : public wxControl
+class WXCHARTS_API wxChartsLegendCtrl : public wxControl
 {
 public:
     /// Constructs a wxChartsLegendCtrl control.

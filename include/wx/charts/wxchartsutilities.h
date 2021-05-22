@@ -44,7 +44,7 @@
 #include <wx/graphics.h>
 
 /// This class contains a set of static utility functions.
-class wxChartsUtilities
+class WXCHARTS_API wxChartsUtilities
 {
 public:
     /// Creates a pen from a wxChartsPenOptions instance.

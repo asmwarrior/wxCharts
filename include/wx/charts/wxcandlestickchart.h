@@ -25,6 +25,8 @@
 #ifndef _WX_CHARTS_WXCANDLESTICKCHART_H_
 #define _WX_CHARTS_WXCANDLESTICKCHART_H_
 
+#include "wxcharts_api_macro.h"
+
 #include "wxchart.h"
 #include "wxchartsohlcdata.h"
 #include "wxcandlestickchartoptions.h"
@@ -33,7 +35,7 @@
 /// Data for the wxCandlestickChartCtrl control.
 
 /// \ingroup dataclasses
-class wxCandlestickChartData
+class WXCHARTS_API wxCandlestickChartData
 {
 public:
     wxCandlestickChartData(const wxVector<wxString> &labels, const wxVector<wxChartsOHLCData> &data);
@@ -63,7 +65,7 @@ private:
 /**
     \ingroup chartclasses
 */
-class wxCandlestickChart : public wxChart
+class WXCHARTS_API wxCandlestickChart : public wxChart
 {
 public:
     /// Constructor.

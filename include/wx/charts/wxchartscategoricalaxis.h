@@ -39,7 +39,7 @@
 #include "wxchartsaxis.h"
 
 /// \ingroup elementclasses
-class wxChartsCategoricalAxis : public wxChartsAxis
+class WXCHARTS_API wxChartsCategoricalAxis : public wxChartsAxis
 {
 public:
     /// Constructs a wxChartsCategoricalAxis axis. The tick marks
