@@ -25,14 +25,14 @@
 #ifndef _WX_CHARTS_WXCHARTSDATASETID_H_
 #define _WX_CHARTS_WXCHARTSDATASETID_H_
 
-#include "wxcharts_api_macro.h"
+#include <wxcharts_export.h>
 
 #include <wx/string.h>
 
 /// Identifier for a dataset.
 
 /// \ingroup dataclasses
-class WXCHARTS_API wxChartsDatasetId
+class WXCHARTS_EXPORT wxChartsDatasetId
 {
 public:
     wxChartsDatasetId();

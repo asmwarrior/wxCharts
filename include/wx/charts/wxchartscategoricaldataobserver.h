@@ -25,9 +25,9 @@
 #ifndef _WX_CHARTS_WXCHARTSCATEGORICALDATAOBSERVER_H_
 #define _WX_CHARTS_WXCHARTSCATEGORICALDATAOBSERVER_H_
 
-#include "wxcharts_api_macro.h"
+#include <wxcharts_export.h>
 
-class WXCHARTS_API wxChartsCategoricalDataObserver
+class WXCHARTS_EXPORT wxChartsCategoricalDataObserver
 {
 };
 

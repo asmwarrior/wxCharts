@@ -28,7 +28,7 @@
 #include "wxchartslegendlineoptions.h"
 
 /// Options for the wxChartsLegendCtrl control.
-class WXCHARTS_API wxChartsLegendOptions
+class WXCHARTS_EXPORT wxChartsLegendOptions
 {
 public:
     /// Constructs a wxChartsLegendOptions instance.

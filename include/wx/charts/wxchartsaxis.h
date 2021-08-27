@@ -44,7 +44,7 @@
 /// This class represents an axis.
 
 /// \ingroup elementclasses
-class WXCHARTS_API wxChartsAxis : public wxChartsElement
+class WXCHARTS_EXPORT wxChartsAxis : public wxChartsElement
 {
 public:
     /// Smart pointer typedef.

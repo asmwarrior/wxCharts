@@ -25,12 +25,12 @@
 #ifndef _WX_CHARTS_WXCHARTSLEGENDLINEOPTIONS_H_
 #define _WX_CHARTS_WXCHARTSLEGENDLINEOPTIONS_H_
 
-#include "wxcharts_api_macro.h"
+#include <wxcharts_export.h>
 
 #include "wxchartfontoptions.h"
 
 /// The options for the wxChartsLegendLine element.
-class WXCHARTS_API wxChartsLegendLineOptions
+class WXCHARTS_EXPORT wxChartsLegendLineOptions
 {
 public:
     /// Constructs a wxChartsLegendLineOptions instance.

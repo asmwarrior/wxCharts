@@ -34,7 +34,7 @@
 #include "wxstackedcolumnchartdatasetoptions.h"
 #include <wx/sharedptr.h>
 
-class WXCHARTS_API wxChartsDatasetTheme
+class WXCHARTS_EXPORT wxChartsDatasetTheme
 {
 public:
     wxChartsDatasetTheme();

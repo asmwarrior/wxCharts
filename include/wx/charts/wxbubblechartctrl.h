@@ -32,7 +32,7 @@
 /**
     \ingroup chartclasses
 */
-class WXCHARTS_API wxBubbleChartCtrl : public wxChartCtrl
+class WXCHARTS_EXPORT wxBubbleChartCtrl : public wxChartCtrl
 {
 public:
     /// Constructor.

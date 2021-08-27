@@ -32,7 +32,7 @@
 /// Factory class to create themes.
 
 /// \ingroup themeclasses
-class WXCHARTS_API wxChartsThemeFactory
+class WXCHARTS_EXPORT wxChartsThemeFactory
 {
 public:
     static wxChartsTheme& Get(const wxChartsThemeId& id);

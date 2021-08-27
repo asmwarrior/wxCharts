@@ -53,7 +53,7 @@
 /// Represent a wxCharts theme.
 
 /// \ingroup themeclasses
-class WXCHARTS_API wxChartsTheme
+class WXCHARTS_EXPORT wxChartsTheme
 {
 public:
     wxChartsTheme();

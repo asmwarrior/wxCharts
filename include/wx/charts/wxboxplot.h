@@ -32,7 +32,7 @@
 /// Data for the wxBoxPlotCtrl control.
 
 /// \ingroup dataclasses
-class WXCHARTS_API wxBoxPlotData
+class WXCHARTS_EXPORT wxBoxPlotData
 {
 public:
     wxBoxPlotData(const wxVector<wxString> &labels, const wxVector<wxVector<wxDouble>> &data);
@@ -52,7 +52,7 @@ private:
 /**
     \ingroup chartclasses
 */
-class WXCHARTS_API wxBoxPlot : public wxChart
+class WXCHARTS_EXPORT wxBoxPlot : public wxChart
 {
 public:
     /// Constructor.

@@ -25,7 +25,7 @@
 #ifndef _WX_CHARTS_WXCHARTSLABEL_H_
 #define _WX_CHARTS_WXCHARTSLABEL_H_
 
-#include "wxcharts_api_macro.h"
+#include <wxcharts_export.h>
 
 #include "wxchartselement.h"
 #include "wxchartslabeloptions.h"
@@ -41,7 +41,7 @@
 /// as that requires a graphics context. The code
 /// that uses this class needs to set and update 
 /// the width and height.
-class WXCHARTS_API wxChartsLabel : public wxChartsElement
+class WXCHARTS_EXPORT wxChartsLabel : public wxChartsElement
 {
 public:
     /// Default constructor

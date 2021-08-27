@@ -1,28 +1,59 @@
-cmake_minimum_required(VERSION 3.12)
+cmake_minimum_required(VERSION 3.20)
 
-project(wxcharts)
+project(wxcharts LANGUAGES CXX)
 
-# options
+# ##############################################################################
+# config cmake #
+# ##############################################################################
+
 option(BUILD_SHARED_LIBS "Build shared libraries" ON)
 
-# wxwidgets
+# ##############################################################################
+# dependency #
+# ##############################################################################
+
 find_package(wxWidgets REQUIRED COMPONENTS core base)
 include(${wxWidgets_USE_FILE})
 
-if(WIN32 AND BUILD_SHARED_LIBS)    
-    add_compile_definitions(WXCHARTS_BUILD_DLL)
-endif()
+# ##############################################################################
+# target     #
+# ##############################################################################
 
-# include
-include_directories(./include/wx/charts)
+file(GLOB SOURCE_FILES src/*.cpp)
 
-# extract the common parts in a (internal) static library
-file(GLOB LIBRARY_SRCS src/*.cpp)
-add_library(wxcharts ${LIBRARY_SRCS})
-target_include_directories(wxcharts PUBLIC include )
-target_link_libraries(wxcharts ${wxWidgets_LIBRARIES})
+add_library(${PROJECT_NAME} ${SOURCE_FILES})
 
-# install
-install(TARGETS ${CMAKE_PROJECT_NAME})
-install(DIRECTORY "${CMAKE_SOURCE_DIR}/include/wx" # source directory
-        DESTINATION "include") # target directory
+# export macro
+include(GenerateExportHeader)
+generate_export_header(${PROJECT_NAME})
+
+target_include_directories(${PROJECT_NAME}
+                           PUBLIC # use PUBLIC instead of PRIVATE because tests use it
+                               $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/include>
+                               $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/include/wx/charts>
+                               $<BUILD_INTERFACE:${PROJECT_BINARY_DIR}>
+                           INTERFACE
+                               $<INSTALL_INTERFACE:${CMAKE_INSTALL_FULL_INCLUDEDIR}>
+                               $<INSTALL_INTERFACE:${CMAKE_INSTALL_FULL_INCLUDEDIR}/include/wx/charts>)
+
+target_link_libraries(${PROJECT_NAME} PUBLIC ${wxWidgets_LIBRARIES})
+
+# ##############################################################################
+# install #
+# ##############################################################################
+
+include(GNUInstallDirs)
+
+install(TARGETS ${PROJECT_NAME}
+        EXPORT export-${PROJECT_NAME})
+
+install(EXPORT export-${PROJECT_NAME}
+        DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/${PROJECT_NAME}
+        NAMESPACE wx::
+        FILE ${PROJECT_NAME}Config.cmake)
+
+install(DIRECTORY "${PROJECT_SOURCE_DIR}/include/" # source directory
+        DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}) # target directory
+
+install(FILES <PROJECT_BINARY_DIR>/wxcharts_export.h
+        DESTINATION ${CMAKE_INSTALL_FULL_INCLUDEDIR}/include/wx/charts)

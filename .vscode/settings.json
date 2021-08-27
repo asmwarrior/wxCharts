@@ -1,0 +1,9 @@
+{
+    "workbench.tree.expandMode": "doubleClick",
+    "cmake.configureArgs": [
+        "-DwxWidgets_CONFIG_EXECUTABLE:PATH=/usr/bin/wx-config-gtk3"
+    ],
+    "clangd.arguments": [
+        "--compile-commands-dir=${workspaceFolder}/out"
+    ]
+}

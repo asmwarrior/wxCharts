@@ -32,7 +32,7 @@
 
 /// It can be used wherever a single line of text is needed
 /// with a single colored square at the start of the line.
-class WXCHARTS_API wxChartsLegendLine : public wxChartsElement
+class WXCHARTS_EXPORT wxChartsLegendLine : public wxChartsElement
 {
 public:
     /// Constructs a wxChartsLegendLine element.

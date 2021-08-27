@@ -25,7 +25,7 @@
 #ifndef _WX_CHARTS_WXCHARTSPENOPTIONS_H_
 #define _WX_CHARTS_WXCHARTSPENOPTIONS_H_
 
-#include "wxcharts_api_macro.h"
+#include <wxcharts_export.h>
 
 #include <wx/colour.h>
 #include <wx/pen.h>
@@ -34,7 +34,7 @@
 /**
     \ingroup elementclasses
 */
-class WXCHARTS_API wxChartsPenOptions
+class WXCHARTS_EXPORT wxChartsPenOptions
 {
 public:
     /// Constructor.

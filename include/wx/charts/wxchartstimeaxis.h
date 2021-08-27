@@ -27,7 +27,7 @@
 
 #include "wxchartsaxis.h"
 
-class WXCHARTS_API wxChartsTimeAxis : public wxChartsAxis
+class WXCHARTS_EXPORT wxChartsTimeAxis : public wxChartsAxis
 {
 public:
     wxChartsTimeAxis(const std::string &id, const wxChartsAxisOptions &options);

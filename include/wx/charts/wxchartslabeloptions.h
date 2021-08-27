@@ -29,7 +29,7 @@
 #include "wxchartbackgroundoptions.h"
 
 /// The options for the wxChartsLabel element.
-class WXCHARTS_API wxChartsLabelOptions : public wxObject
+class WXCHARTS_EXPORT wxChartsLabelOptions : public wxObject
 {
 public:
     wxChartsLabelOptions();

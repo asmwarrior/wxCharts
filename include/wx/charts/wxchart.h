@@ -25,7 +25,7 @@
 #ifndef _WX_CHARTS_WXCHART_H_
 #define _WX_CHARTS_WXCHART_H_
 
-#include "wxcharts_api_macro.h"
+#include <wxcharts_export.h>
 
 #include "wxchartcommonoptions.h"
 #include "wxchartselement.h"
@@ -36,7 +36,7 @@
 /// Base class for the chart classes.
 
 /// \ingroup chartclasses
-class WXCHARTS_API wxChart
+class WXCHARTS_EXPORT wxChart
 {
 public:
     wxChart();

@@ -40,7 +40,7 @@
 #include <wx/geometry.h>
 
 /// This class maintains a mapping between points on the chart and pixels on the screen.
-class WXCHARTS_API wxChartsGridMapping
+class WXCHARTS_EXPORT wxChartsGridMapping
 {
 public:
     wxChartsGridMapping(const wxSize &size,

@@ -33,7 +33,7 @@
 
 /// The wxBarChartCtrl, wxColumnChartCtrl, wxStackedBarChartCtrl and wxStackedColumnChartCtrl use this class.
 /// \ingroup dataclasses
-class WXCHARTS_API wxChartsDoubleDataset : public wxChartsDataset
+class WXCHARTS_EXPORT wxChartsDoubleDataset : public wxChartsDataset
 {
 public:
     /// Smart pointer typedef.

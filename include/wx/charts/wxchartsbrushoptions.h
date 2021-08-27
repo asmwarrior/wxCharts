@@ -25,7 +25,7 @@
 #ifndef _WX_CHARTS_WXCHARTSBRUSHOPTIONS_H_
 #define _WX_CHARTS_WXCHARTSBRUSHOPTIONS_H_
 
-#include "wxcharts_api_macro.h"
+#include <wxcharts_export.h>
 
 #include <wx/colour.h>
 
@@ -33,7 +33,7 @@
 /**
     \ingroup elementclasses
 */
-class WXCHARTS_API wxChartsBrushOptions
+class WXCHARTS_EXPORT wxChartsBrushOptions
 {
 public:
     /// Constructor.

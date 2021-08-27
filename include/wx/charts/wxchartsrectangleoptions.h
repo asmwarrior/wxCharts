@@ -32,7 +32,7 @@
 /**
     \ingroup elementclasses
 */
-class WXCHARTS_API wxChartsRectangleOptions
+class WXCHARTS_EXPORT wxChartsRectangleOptions
 {
 public:
     /// Constructor.

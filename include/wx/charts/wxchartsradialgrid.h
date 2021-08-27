@@ -47,7 +47,7 @@
 /// background of some of the chart controls like for instance 
 /// the polar area chart.
 /// \ingroup elementclasses
-class WXCHARTS_API wxChartsRadialGrid : public wxChartsElement
+class WXCHARTS_EXPORT wxChartsRadialGrid : public wxChartsElement
 {
 public:
     /// Constructs a wxChartsRadialGrid element.

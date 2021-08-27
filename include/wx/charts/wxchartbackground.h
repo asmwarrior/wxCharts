@@ -25,13 +25,13 @@
 #ifndef _WX_CHARTS_WXCHARTBACKGROUND_H_
 #define _WX_CHARTS_WXCHARTBACKGROUND_H_
 
-#include "wxcharts_api_macro.h"
+#include <wxcharts_export.h>
 
 #include "wxchartbackgroundoptions.h"
 #include <wx/graphics.h>
 
 /// Class to draw backgrounds for various chart elements.
-class WXCHARTS_API wxChartBackground
+class WXCHARTS_EXPORT wxChartBackground
 {
 public:
     wxChartBackground(const wxChartBackgroundOptions &options);

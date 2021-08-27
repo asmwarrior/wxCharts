@@ -25,7 +25,7 @@
 
 /// @file
 
-#include "wxcharts_api_macro.h"
+#include <wxcharts_export.h>
 
 #include <wx/string.h>
 #include <wx/colour.h>
@@ -33,7 +33,7 @@
 /// The data associated with a slice in some charts like the pie and doughnut charts.
 
 /// \ingroup dataclasses
-class WXCHARTS_API wxChartSliceData
+class WXCHARTS_EXPORT wxChartSliceData
 {
 public:
     /// Constructs a wxChartSliceData instance.

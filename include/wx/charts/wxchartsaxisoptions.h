@@ -25,7 +25,7 @@
 #ifndef _WX_CHARTS_WXCHARTSAXISOPTIONS_H_
 #define _WX_CHARTS_WXCHARTSAXISOPTIONS_H_
 
-#include "wxcharts_api_macro.h"
+#include <wxcharts_export.h>
 
 #include "wxchartfontoptions.h"
 
@@ -107,7 +107,7 @@ enum wxChartsAxisValueMode
 /// The options for the wxChartsAxis element.
 
 /// \ingroup elementclassess
-class WXCHARTS_API wxChartsAxisOptions
+class WXCHARTS_EXPORT wxChartsAxisOptions
 {
 public:
     /// Constructs a new wxChartsAxisOptions

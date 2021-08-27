@@ -37,7 +37,7 @@ enum wxChartsRadialGridStyle
 };
 
 /// Options for the wxChartsRadialGrid element.
-class WXCHARTS_API wxChartsRadialGridOptions
+class WXCHARTS_EXPORT wxChartsRadialGridOptions
 {
 public:
     /// Constructs a wxChartsRadialGridOptions instance.

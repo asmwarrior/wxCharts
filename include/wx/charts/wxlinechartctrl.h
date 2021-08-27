@@ -36,7 +36,7 @@
 #ifndef _WX_CHARTS_WXLINECHARTCTRL_H_
 #define _WX_CHARTS_WXLINECHARTCTRL_H_
 
-#include "wxcharts_api_macro.h"
+#include <wxcharts_export.h>
 
 #include "wxchartctrl.h"
 #include "wxlinechart.h"
@@ -45,7 +45,7 @@
 /// A control that displays a line chart.
 
 /// \ingroup chartclasses
-class WXCHARTS_API wxLineChartCtrl : public wxChartCtrl
+class WXCHARTS_EXPORT wxLineChartCtrl : public wxChartCtrl
 {
 public:
     /// Constructs a wxLineChartCtrl control.

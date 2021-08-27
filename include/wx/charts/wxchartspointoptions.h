@@ -25,14 +25,14 @@
 #ifndef _WX_CHARTS_WXCHARTSPOINTOPTIONS_H_
 #define _WX_CHARTS_WXCHARTSPOINTOPTIONS_H_
 
-#include "wxcharts_api_macro.h"
+#include <wxcharts_export.h>
 
 #include <wx/colour.h>
 
 /// The options for the wxChartPoint element.
 
 /// \ingroup elementclasses
-class WXCHARTS_API wxChartsPointOptions
+class WXCHARTS_EXPORT wxChartsPointOptions
 {
 public:
     /// Constructs a wxChartPointOptions instance.

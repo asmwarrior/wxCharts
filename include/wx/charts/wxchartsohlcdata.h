@@ -25,7 +25,7 @@
 #ifndef _WX_CHARTS_WXCHARTSOHLCDATA_H_
 #define _WX_CHARTS_WXCHARTSOHLCDATA_H_
 
-#include "wxcharts_api_macro.h"
+#include <wxcharts_export.h>
 
 #include <wx/defs.h>
 
@@ -35,7 +35,7 @@
 
     \ingroup dataclasses
 */
-class WXCHARTS_API wxChartsOHLCData
+class WXCHARTS_EXPORT wxChartsOHLCData
 {
 public:
     wxChartsOHLCData(wxDouble open, wxDouble high, wxDouble low, wxDouble close);

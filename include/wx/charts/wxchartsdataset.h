@@ -32,7 +32,7 @@
 /// Base class for the dataset classes.
 
 /// \ingroup dataclasses
-class WXCHARTS_API wxChartsDataset
+class WXCHARTS_EXPORT wxChartsDataset
 {
 public:
     wxChartsDataset(const wxString& name);
