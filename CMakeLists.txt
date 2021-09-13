@@ -14,6 +14,8 @@ option(BUILD_SHARED_LIBS "Build shared libraries" ON)
 #dependency #
 #############
 
+include(GNUInstallDirs)
+
 find_package(wxWidgets REQUIRED COMPONENTS core base)
 include(${wxWidgets_USE_FILE})
 
@@ -40,11 +42,9 @@ target_include_directories(${PROJECT_NAME}
 
 target_link_libraries(${PROJECT_NAME} PUBLIC ${wxWidgets_LIBRARIES})
 
-# #########
+###########
 # install #
-# #########
-
-include(GNUInstallDirs)
+###########
 
 install(TARGETS ${PROJECT_NAME}
         EXPORT ${PROJECT_NAME})
