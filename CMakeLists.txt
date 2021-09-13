@@ -1,6 +1,8 @@
 cmake_minimum_required(VERSION 3.20)
 
-project(wxcharts LANGUAGES CXX)
+project(wxcharts
+        VERSION 1.1
+        LANGUAGES CXX)
 
 ################
 # config cmake #
@@ -22,6 +24,7 @@ include(${wxWidgets_USE_FILE})
 file(GLOB SOURCE_FILES src/*.cpp)
 
 add_library(${PROJECT_NAME} ${SOURCE_FILES})
+add_library(${PROJECT_NAME}::${PROJECT_NAME} ALIAS ${PROJECT_NAME})
 
 # export macro
 include(GenerateExportHeader)
@@ -29,12 +32,11 @@ generate_export_header(${PROJECT_NAME})
 
 target_include_directories(${PROJECT_NAME}
                            PUBLIC # use PUBLIC instead of PRIVATE because tests use it
-                               $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/include>
-                               $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/include/wx/charts>
+                               $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/include/wxcharts>
                                $<BUILD_INTERFACE:${PROJECT_BINARY_DIR}>
                            INTERFACE
                                $<INSTALL_INTERFACE:${CMAKE_INSTALL_FULL_INCLUDEDIR}>
-                               $<INSTALL_INTERFACE:${CMAKE_INSTALL_FULL_INCLUDEDIR}/include/wx/charts>)
+                               $<INSTALL_INTERFACE:${CMAKE_INSTALL_FULL_INCLUDEDIR}/include/wxcharts>)
 
 target_link_libraries(${PROJECT_NAME} PUBLIC ${wxWidgets_LIBRARIES})
 
@@ -45,15 +47,15 @@ target_link_libraries(${PROJECT_NAME} PUBLIC ${wxWidgets_LIBRARIES})
 include(GNUInstallDirs)
 
 install(TARGETS ${PROJECT_NAME}
-        EXPORT export-${PROJECT_NAME})
+        EXPORT ${PROJECT_NAME})
 
-install(EXPORT export-${PROJECT_NAME}
+install(EXPORT ${PROJECT_NAME}
         DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/${PROJECT_NAME}
-        NAMESPACE wx::
-        FILE ${PROJECT_NAME}Config.cmake)
+        NAMESPACE ${PROJECT_NAME}::
+        FILE ${PROJECT_NAME}-config.cmake)
 
 install(DIRECTORY "${PROJECT_SOURCE_DIR}/include/" # source directory
         DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}) # target directory
 
-install(FILES <PROJECT_BINARY_DIR>/wxcharts_export.h
-        DESTINATION ${CMAKE_INSTALL_FULL_INCLUDEDIR}/include/wx/charts)
+install(FILES ${PROJECT_BINARY_DIR}/wxcharts_export.h
+        DESTINATION ${CMAKE_INSTALL_FULL_INCLUDEDIR}/include/wxcharts)
