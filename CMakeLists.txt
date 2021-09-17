@@ -41,7 +41,7 @@ target_include_directories(${PROJECT_NAME}
                                $<BUILD_INTERFACE:${PROJECT_BINARY_DIR}>
                            INTERFACE
                                $<INSTALL_INTERFACE:${CMAKE_INSTALL_FULL_INCLUDEDIR}>
-                               $<INSTALL_INTERFACE:${CMAKE_INSTALL_FULL_INCLUDEDIR}/include/wxcharts>)
+                               $<INSTALL_INTERFACE:${CMAKE_INSTALL_FULL_INCLUDEDIR}/${PROJECT_NAME}>)
 
 target_link_libraries(${PROJECT_NAME} PUBLIC wxwidgets::wxwidgets)
 
@@ -61,4 +61,4 @@ install(DIRECTORY "${PROJECT_SOURCE_DIR}/include/" # source directory
         DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}) # target directory
 
 install(FILES ${PROJECT_BINARY_DIR}/wxcharts_export.h
-        DESTINATION ${CMAKE_INSTALL_FULL_INCLUDEDIR}/include/wxcharts)
+        DESTINATION ${CMAKE_INSTALL_FULL_INCLUDEDIR}/${PROJECT_NAME})
