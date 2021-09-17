@@ -59,6 +59,12 @@ public:
     wxChartsLabel(const wxString &text, wxDouble width,
         wxDouble height, const wxChartsLabelOptions &options);
 
+public:
+    bool operator==(const wxChartsLabel & rhs)
+    {
+        return m_text == rhs.m_text;
+    }
+public:
     virtual void Draw(wxGraphicsContext &gc) const;
 
     virtual bool HitTest(const wxPoint &point) const;
