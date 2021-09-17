@@ -64,6 +64,12 @@ public:
     {
         return m_text == rhs.m_text;
     }
+    
+    bool operator!=(const wxChartsLabel & rhs)
+    {
+        return m_text != rhs.m_text;
+    }
+
 public:
     virtual void Draw(wxGraphicsContext &gc) const;
 
