@@ -20,11 +20,13 @@ option(BUILD_SHARED_LIBS "Build shared libraries" ON)
 
 include(GNUInstallDirs)
 
-find_package(wxwidgets REQUIRED COMPONENTS core base)
+find_package(wxWidgets REQUIRED COMPONENTS core base)
 
 ##########
 # target #
 ##########
+
+include(${wxWidgets_USE_FILE})
 
 file(GLOB SOURCE_FILES src/*.cpp)
 
@@ -43,7 +45,7 @@ target_include_directories(${PROJECT_NAME}
                                $<INSTALL_INTERFACE:${CMAKE_INSTALL_FULL_INCLUDEDIR}>
                                $<INSTALL_INTERFACE:${CMAKE_INSTALL_FULL_INCLUDEDIR}/${PROJECT_NAME}>)
 
-target_link_libraries(${PROJECT_NAME} PUBLIC wxwidgets::wxwidgets)
+target_link_libraries(${PROJECT_NAME} PUBLIC ${wxWidgets_LIBRARIES})
 
 ###########
 # install #
