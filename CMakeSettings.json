@@ -1,0 +1,28 @@
+﻿{
+    "configurations": [
+        {
+            "name": "x64-Debug",
+            "generator": "Ninja",
+            "configurationType": "Debug",
+            "inheritEnvironments": [ "msvc_x64_x64" ],
+            "buildRoot": "${projectDir}\\out\\build\\${name}",
+            "installRoot": "C:\\Users\\alg\\Develop\\lib\\installed\\debug",
+            "cmakeCommandArgs": "-DVCPKG_TARGET_TRIPLET=x64-windows-cpp17",
+            "buildCommandArgs": "-j 16",
+            "ctestCommandArgs": "",
+            "cmakeToolchain": "C:/Users/alg/Develop/lib/vcpkg/scripts/buildsystems/vcpkg.cmake"
+        },
+        {
+            "name": "x64-Release",
+            "generator": "Ninja",
+            "configurationType": "Release",
+            "buildRoot": "${projectDir}\\out\\build\\${name}",
+            "installRoot": "C:\\Users\\alg\\Develop\\lib\\installed\\release",
+            "cmakeCommandArgs": "-DVCPKG_TARGET_TRIPLET=x64-windows-cpp17",
+            "buildCommandArgs": "-j 16",
+            "ctestCommandArgs": "",
+            "cmakeToolchain": "C:/Users/alg/Develop/lib/vcpkg/scripts/buildsystems/vcpkg.cmake",
+            "inheritEnvironments": [ "msvc_x64_x64" ]
+        }
+    ]
+}
