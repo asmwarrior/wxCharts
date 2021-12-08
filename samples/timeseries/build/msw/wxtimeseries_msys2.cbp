@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="WxTimeSeries" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug x64">
+				<Option output="./Debug/WxTimeSeries" prefix_auto="1" extension_auto="1" />
+				<Option object_output="Debug/" />
+				<Option deps_output="./Debug/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-Wall" />
+					<Add option="-g" />
+					<Add option="-O0" />
+					<Add option="-DWIN32" />
+					<Add option="-D_DEBUG" />
+					<Add directory="$(WXCHARTS)/include/" />
+					<Add directory="$(WXWIN)/include/" />
+					<Add directory="$(WXWIN)/include/msvc/" />
+				</Compiler>
+			</Target>
+			<Target title="Release x64">
+				<Option output="./Release/WxTimeSeries" prefix_auto="1" extension_auto="1" />
+				<Option object_output="Release/" />
+				<Option deps_output="./Release/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O1" />
+					<Add option="-Wall" />
+					<Add option="-DWIN32" />
+					<Add option="-DNDEBUG" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-pipe" />
+			<Add option="-mthreads" />
+			<Add option="`wx-config-msys2 --cflags --prefix=$(TARGET_COMPILER_DIR)`" />
+			<Add option="-D__GNUWIN32__" />
+			<Add option="-D__WXMSW__" />
+			<Add option="-DWXUSINGDLL" />
+			<Add option="-DwxUSE_UNICODE" />
+			<Add option="-DWX_PRECOMP" />
+			<Add directory="../../../../include" />
+			<Add directory="../../../../include/wxcharts" />
+		</Compiler>
+		<ResourceCompiler>
+			<Add option="`wx-config-msys2 --rcflags --prefix=$(TARGET_COMPILER_DIR)`" />
+		</ResourceCompiler>
+		<Linker>
+			<Add option="-mthreads" />
+			<Add option="-lwxchartsd" />
+			<Add option="`wx-config-msys2 --libs=all --prefix=$(TARGET_COMPILER_DIR)`" />
+			<Add directory="../../../../lib/gcc_x64_lib" />
+		</Linker>
+		<Unit filename="../../src/wxtimeseriesapp.cpp" />
+		<Unit filename="../../src/wxtimeseriesapp.h" />
+		<Unit filename="../../src/wxtimeseriesframe.cpp" />
+		<Unit filename="../../src/wxtimeseriesframe.h" />
+		<Extensions>
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

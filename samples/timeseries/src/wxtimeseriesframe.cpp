@@ -23,7 +23,8 @@
 #include "wxtimeseriesframe.h"
 #include <wx/panel.h>
 #include <wx/sizer.h>
-#include <wx/charts/wxcharts.h>
+#include <wxcharts/wxchart.h>
+#include <wxcharts/wxtimeserieschartctrl.h>
 
 WxTimeSeriesFrame::WxTimeSeriesFrame(const wxString& title)
 	: wxFrame(NULL, wxID_ANY, title)
