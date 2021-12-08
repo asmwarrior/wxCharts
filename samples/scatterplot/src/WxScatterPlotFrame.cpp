@@ -23,7 +23,8 @@
 #include "WxScatterPlotFrame.h"
 #include <wx/panel.h>
 #include <wx/sizer.h>
-#include <wx/charts/wxcharts.h>
+#include <wxcharts/wxchart.h>
+#include <wxcharts/wxscatterplotctrl.h>
 
 WxScatterPlotFrame::WxScatterPlotFrame(const wxString& title)
 	: wxFrame(NULL, wxID_ANY, title)
